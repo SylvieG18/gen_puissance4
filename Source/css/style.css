@@ -1,6 +1,7 @@
 /* couleur du fond */
 body{
     background-image: linear-gradient(rgb(100, 100, 248),rgb(179, 179, 219));   
+    height: 100vh;
 }
 
 #blocPage {
@@ -13,46 +14,42 @@ h1{
     color: rgb(10, 10, 129);
     text-transform: uppercase;
     margin-bottom: 0;
-    font-size: 2.4em;
+    font-size: 2em;
 }
 
 /* --------------fenêtre modale victoire ------------------------- */
 #modalVictoire{
     display: none;
-
     z-index: 1;
-    width: 420px;
+    width: 280px;
     margin: 0 auto;
 }
 .victoire{
-    width: 420px;
-    height: 140px;
+    width: 280px;
+    height: 100px;
     position: absolute;
 }
 #logo{
     position: absolute;
-    width: 70px;
-    height: 70px;
-    margin-left: 175px;
-    margin-top: 60px;
+    width: 40px;
+    height: 40px;
+    margin-left: 120px;
+    margin-top: 40px;
     z-index: 2;
-
 }
-
-
 
 /* ----------------------------JOUEURS------------------------ */
 #joueurs{
     display:flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 10px 0;
 }
 #joueurs img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin-left: 10px;
 }
 #joueur1, #joueur2{
@@ -71,12 +68,12 @@ h1{
     flex-direction: row;
     justify-content: space-around;
     margin: 10px auto;
-    width: 420px;
+    width: 280px;
 }
 /* taille des emplacements jeton de départ */
 #choixColonne img{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     opacity: 0.5;
 }
 /* Apparition des jetons au survol */
@@ -84,46 +81,41 @@ h1{
     opacity: 1;
 }
 
-
-
 /* ------------------------GRILLE DE JEU------------------- */
 #grille{
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 /* taille des cases de la grille  + taille et position du jeton  */
 #grille img{
-    width: 60px;
-    height: 60px;
-    background-size: 50px;
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
     background-position: center;
-
 }
-
 
 /* -----------------------AFFICHAGE DES SCORES -------------- */
 #score{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 310px;
+    width: 250px;
     margin: 0 auto; 
 }
 #score img{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin: 0 5px;
 }
 #score p{
     background-color: white;
-    width: 60px;
-    height: 50px;
+    width: 40px;
+    height: 30px;
     border : 3px black solid;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 30px;
     text-align: center;
 }
 #scoreJoueur1{
@@ -141,7 +133,7 @@ h1{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 400px;
+    width: 260px;
     margin: 0 auto;
 }
 
@@ -149,9 +141,85 @@ button{
     background-image: linear-gradient(rgb(119, 119, 211),rgb(27, 27, 116));
     border: none;
     border-radius: 5px;
-    width: 120px;
+    width: 100px;
     line-height: 30px;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
     color: rgb(4, 4, 63);
 }
+
+
+@media screen and (min-width: 600px){
+    h1{
+        font-size: 4em;
+    }
+    /* --------------fenêtre modale victoire ------------------------- */
+    #modalVictoire{
+        width: 420px;
+    }
+    .victoire{
+        width: 420px;
+        height: 160px;
+    }
+    #logo{
+        width: 60px;
+        height: 60px;
+        margin-left: 180px;
+        margin-top: 70px;
+    }
+    /* ----------------------------JOUEURS------------------------ */
+    #joueurs{
+        font-size: 2.4em;
+        margin: 20px 0 20px 0;
+    }
+    #joueurs img{
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+    }
+    /* ------------------EMPLACEMENTS JETON DEPART---------------- */
+    /* disposition des emplacements jeton de départ */
+    #choixColonne {
+        margin: 20px auto;
+        width: 420px;
+    }
+    /* taille des emplacements jeton de départ */
+    #choixColonne img{
+        width: 50px;
+        height: 50px;
+    }
+    /* taille des cases de la grille  + taille et position du jeton  */
+    #grille img{
+        width: 60px;
+        height: 60px;
+        background-size: 50px;
+    }
+    /* -----------------------AFFICHAGE DES SCORES -------------- */
+    #score{
+        width: 350px;
+        margin: 0 auto; 
+    }
+    #score img{
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+    }
+    #score p{
+        width: 60px;
+        height: 40px;
+        font-size: 2em;
+        line-height: 40px;
+    }
+    /* -----------------------------BOUTONS --------------------------- */
+    #boutons{
+        width: 350px;
+        margin: 0 auto;
+    }
+    button{
+        width: 100px;
+        line-height: 40px;
+        font-size: 1.2em;
+    }
+
+}
+
